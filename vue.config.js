@@ -1,10 +1,12 @@
-const path = require('path');
+const path = "/sbosa/";
 
 function resolveSrc(_path) {
-  return path.join(__dirname, _path);
+  return _path;
 }
 // vue.config.js
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'production' ?
+  '/sbosa/' : '/',
   lintOnSave: true,
   configureWebpack: {
     // Set up all the aliases we use in our app.
